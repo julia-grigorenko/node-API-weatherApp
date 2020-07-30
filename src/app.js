@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 //define paths for Express config
-const publicDirectoryPath = path.join(__dirname, "../public");
+
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 
@@ -18,26 +18,26 @@ app.set("views", viewsPath); //castomising views folder
 hbs.registerPartials(partialsPath);
 
 //Setup static directory to serve
-app.use(express.static(publicDirectoryPath));
+app.use(express.static('public'));
 
 app.get("", (req, res) => {
   //set the route to view's template
   res.render("index", {
-    title: "weather",
+    title: "Weather",
     name: "Julia",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "about",
+    title: "About",
     name: "Julia",
   });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
-    title: "help",
+    title: "Help",
     name: "Julia",
     helpText: "This is some helpful text.",
   });
