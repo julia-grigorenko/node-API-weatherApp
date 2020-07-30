@@ -15,7 +15,12 @@ const forecast = (latitude, longitude, callback) => {
           location:    body.location.name,
           Country:     body.location.country,
           description: body.current.weather_descriptions[0],
-          feelslike:   body.current.feelslike
+          feelslike:   body.current.feelslike,
+          temperature: body.current.temperature,
+          cloudcover:  body.current.cloudcover,
+          wind_speed:  body.current.wind_speed,
+          wind_dir:    body.current.wind_dir,
+          weather_icons: body.current.weather_icons[0]
         });
       }
   });

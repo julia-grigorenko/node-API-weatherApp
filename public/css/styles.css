@@ -39,6 +39,11 @@ header a {
 
 .portrait {
   width: 250px;
+  border-radius: 10px;
+}
+
+#img img {
+  border-radius: 10px;
 }
 
 input {
@@ -52,4 +57,11 @@ button {
   background: #888888;
   color: white;
   padding: 8px;
+}
+
+p {
+  width: 250px;
+  margin-top: 20px;
+  font-size: 18px;
+  /* color: #999999; */
 }
